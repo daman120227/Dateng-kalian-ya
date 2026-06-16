@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raffa & Aisha Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Cormorant Garamond',serif;
+background:#fff8f8;
+color:#444;
+overflow-x:hidden;
+}
+
+:root{
+--pink:#f9d7df;
+--pink2:#ffeef2;
+--gold:#d4af37;
+--rose:#c88f9c;
+--white:#ffffff;
+}
+
+section{
+padding:80px 20px;
+position:relative;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+h1,h2,h3{
+font-weight:700;
+}
+
+.script{
+font-family:'Great Vibes',cursive;
+}
+
+.center{
+text-align:center;
+}
+
+/* COVER */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(
+135deg,
+#f7d1db,
+#ffeef3
+);
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at top left,#ffffff90,transparent 40%),
+radial-gradient(circle at bottom right,#ffffff90,transparent 40%);
+}
+
+.flower{
+position:absolute;
+font-size:80px;
+opacity:.12;
+animation:float 12s linear infinite;
+}
+
+.flower:nth-child(1){
+left:5%;
+top:10%;
+}
+
+.flower:nth-child(2){
+right:5%;
+top:15%;
+}
+
+.flower:nth-child(3){
+left:10%;
+bottom:10%;
+}
+
+.flower:nth-child(4){
+right:10%;
+bottom:8%;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px) rotate(0deg);
+}
+50%{
+transform:translateY(-20px) rotate(10deg);
+}
+100%{
+transform:translateY(0px) rotate(0deg);
+}
+}
+
+.cover-card{
+position:relative;
+z-index:2;
+padding:40px;
+max-width:700px;
+}
+
+.monogram{
+font-size:90px;
+font-family:'Great Vibes',cursive;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.cover-title{
+font-size:24px;
+letter-spacing:4px;
+color:#8b6a72;
+margin-bottom:20px;
+}
+
+.couple{
+font-size:72px;
+color:#5e4b52;
+line-height:1;
+}
+
+.and{
+font-family:'Great Vibes',cursive;
+font-size:50px;
+color:var(--gold);
+margin:10px 0;
+}
+
+.guest{
+margin-top:40px;
+font-size:26px;
+}
+
+.guest-name{
+font-weight:bold;
+color:#7d5560;
+}
+
+.open-btn{
+display:inline-block;
+margin-top:35px;
+padding:16px 38px;
+border-radius:40px;
+background:var(--gold);
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.open-btn:hover{
+transform:scale(1.05);
+}
+
+.glitter{
+position:fixed;
+width:6px;
+height:6px;
+background:gold;
+border-radius:50%;
+opacity:.6;
+animation:glitter 8s linear infinite;
+}
+
+@keyframes glitter{
+0%{
+transform:translateY(-100px);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+/* MUSIC */
+
+.music-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:var(--gold);
+color:white;
+font-size:24px;
+z-index:999;
+cursor:pointer;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.quote{
+background:white;
+text-align:center;
+}
+
+.quote h2{
+font-size:48px;
+color:var(--rose);
+margin-bottom:20px;
+}
+
+.quote p{
+max-width:700px;
+margin:auto;
+font-size:22px;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">♫</button>
+
+<div class="hero">
+
+<div class="flower">🌸</div>
+<div class="flower">🌸</div>
+<div class="flower">🌸</div>
+<div class="flower">🌸</div>
+
+<div class="cover-card">
+
+<div class="monogram">
+R & A
+</div>
+
+<div class="cover-title">
+THE WEDDING OF
+</div>
+
+<div class="couple">
+Raffa
+</div>
+
+<div class="and">
+&
+</div>
+
+<div class="couple">
+Aisha
+</div>
+
+<div class="guest">
+Kepada Yth.
+<br>
+<span class="guest-name" id="guestName">
+Tamu Undangan
+</span>
+</div>
+
+<a href="#quote" class="open-btn" onclick="playMusic()">
+Buka Undangan
+</a>
+
+</div>
+</div>
+
+<section id="quote" class="quote">
+
+<div class="container">
+
+<h2 class="script">
+Ar-Rum : 21
+</h2>
+
+<p>
+Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang di antara kamu.
+</p>
+
+</div>
+
+  </section>
+  <section class="section">
+
+<div class="container">
+
+<div class="card">
+
+<h2 class="section-title script">
+Bride & Groom
+</h2>
+
+<div class="couple-grid">
+
+<div class="person">
+
+<div class="avatar">
+🤵
+</div>
+
+<h3>
+Daman Kurnia Bintang Ar Raffa
+</h3>
+
+<p>
+Putra dari
+</p>
+
+<p class="parent">
+Tossy Kurnia Sentausa
+<br>
+&
+<br>
+Meliani Agustina
+</p>
+
+</div>
+
+<div class="person">
+
+<div class="avatar">
+👰
+</div>
+
+<h3>
+Aisha Rahma Nurulsidqia
+</h3>
+
+<p>
+Putri dari
+</p>
+
+<p class="parent">
+Zidky Yaqob
+<br>
+&
+<br>
+Lilis Kurniasih
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section countdown-section">
+
+<div class="container">
+
+<div class="card center">
+
+<h2 class="section-title script">
+Menuju Hari Bahagia
+</h2>
+
+<div class="count-grid">
+
+<div class="count-box">
+<span id="days">0</span>
+<p>Hari</p>
+</div>
+
+<div class="count-box">
+<span id="hours">0</span>
+<p>Jam</p>
+</div>
+
+<div class="count-box">
+<span id="minutes">0</span>
+<p>Menit</p>
+</div>
+
+<div class="count-box">
+<span id="seconds">0</span>
+<p>Detik</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="card">
+
+<h2 class="section-title script">
+Akad & Resepsi
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+💍
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Akad Nikah & Resepsi
+</h3>
+
+<p>
+20 September 2026
+</p>
+
+<p>
+09.00 WIB
+</p>
+
+<p>
+KUA Serpong
+</p>
+
+<p>
+Jl. Raya Serpong No.45,
+Serpong,
+Kec. Serpong,
+Kota Tangerang Selatan,
+Banten 15310
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="center">
+
+<a
+class="gold-btn"
+target="_blank"
+href="https://maps.google.com/?q=KUA+Serpong+Tangerang+Selatan">
+
+Buka Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+.section-title{
+font-size:48px;
+color:#c88f9c;
+margin-bottom:35px;
+text-align:center;
+}
+
+.card{
+background:white;
+border-radius:24px;
+padding:40px;
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+}
+
+.couple-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.person{
+text-align:center;
+}
+
+.avatar{
+width:120px;
+height:120px;
+margin:auto;
+border-radius:50%;
+background:#ffeef3;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:50px;
+margin-bottom:20px;
+}
+
+.parent{
+font-weight:bold;
+color:#8b6570;
+line-height:1.8;
+}
+
+.count-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.count-box{
+background:#fff4f7;
+border-radius:20px;
+padding:20px;
+}
+
+.count-box span{
+display:block;
+font-size:42px;
+font-weight:bold;
+color:#d4af37;
+}
+
+.timeline{
+margin-top:20px;
+}
+
+.timeline-item{
+display:flex;
+gap:20px;
+align-items:flex-start;
+}
+
+.timeline-icon{
+font-size:34px;
+}
+
+.timeline-content h3{
+margin-bottom:10px;
+color:#8b6570;
+}
+
+.gold-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+border-radius:40px;
+background:#d4af37;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.couple-grid{
+grid-template-columns:1fr;
+}
+
+.count-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.section-title{
+font-size:38px;
+}
+
+}
+
+</style>
+<section class="section">
+
+<div class="container">
+
+<div class="card center">
+
+<h2 class="section-title script">
+Wedding Gift
+</h2>
+
+<p>
+Doa Restu Anda merupakan karunia yang sangat berarti bagi kami.
+Dan jika memberi adalah ungkapan tanda kasih,
+Anda dapat memberi kado secara cashless.
+</p>
+
+<br><br>
+
+<div class="gift-card">
+
+<h3>
+🏦 Bank Mandiri
+</h3>
+
+<h2 id="rekening">
+1480027338055
+</h2>
+
+<p>
+a.n. Daman Kurnia Bintang
+</p>
+
+<button
+class="gold-btn"
+onclick="copyRekening()">
+
+Salin Rekening
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="card center">
+
+<h2 class="section-title script">
+RSVP
+</h2>
+
+<p>
+Konfirmasi kehadiran melalui WhatsApp
+</p>
+
+<br>
+
+<input
+type="text"
+id="nama"
+placeholder="Nama Anda"
+class="input">
+
+<br><br>
+
+<select id="status" class="input">
+<option>Hadir</option>
+<option>Tidak Hadir</option>
+</select>
+
+<br><br>
+
+<textarea
+id="ucapan"
+rows="5"
+class="input"
+placeholder="Ucapan dan doa">
+</textarea>
+
+<br><br>
+
+<button
+class="gold-btn"
+onclick="kirimRSVP()">
+
+Kirim RSVP
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="card center">
+
+<h2 class="section-title script">
+Doa Pengantin
+</h2>
+
+<h2>
+بارك الله لكما وبارك عليكما وجمع بينكما في خير
+</h2>
+
+<br>
+
+<p>
+Semoga Allah memberkahi kalian berdua,
+melimpahkan keberkahan atas kalian,
+dan menghimpun kalian berdua dalam kebaikan.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container center">
+
+<h2 class="script">
+Thank You
+</h2>
+
+<p>
+Merupakan suatu kehormatan dan kebahagiaan bagi kami
+apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+</p>
+
+<br>
+
+<h3>
+Raffa & Aisha
+</h3>
+
+</div>
+
+</footer>
+
+
+<button
+id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+
+<style>
+
+.gift-card{
+background:#fff4f7;
+padding:30px;
+border-radius:20px;
+}
+
+.input{
+width:100%;
+max-width:500px;
+padding:14px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+footer{
+background:#f7d1db;
+padding:60px 20px;
+text-align:center;
+}
+
+#topBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:white;
+font-size:20px;
+cursor:pointer;
+z-index:999;
+}
+
+.petal{
+position:fixed;
+top:-50px;
+font-size:20px;
+opacity:.5;
+pointer-events:none;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:
+translateY(-100px)
+rotate(0deg);
+}
+
+100%{
+transform:
+translateY(120vh)
+rotate(360deg);
+}
+
+}
+
+</style>
+
+
+<script>
+
+/* Nama tamu otomatis */
+
+const params =
+new URLSearchParams(window.location.search);
+
+document.getElementById(
+"guestName"
+).innerHTML =
+params.get("to") || "Tamu Undangan";
+
+
+/* Countdown */
+
+const targetDate =
+new Date("2026-09-20T09:00:00").getTime();
+
+setInterval(function(){
+
+const now =
+new Date().getTime();
+
+const distance =
+targetDate - now;
+
+const days =
+Math.floor(
+distance/(1000*60*60*24)
+);
+
+const hours =
+Math.floor(
+(distance%(1000*60*60*24))
+/
+(1000*60*60)
+);
+
+const minutes =
+Math.floor(
+(distance%(1000*60*60))
+/
+(1000*60)
+);
+
+const seconds =
+Math.floor(
+(distance%(1000*60))
+/
+1000
+);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+
+/* Musik */
+
+const music =
+document.getElementById("music");
+
+function playMusic(){
+
+music.play();
+
+}
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
+
+/* Copy rekening */
+
+function copyRekening(){
+
+navigator.clipboard.writeText(
+"1480027338055"
+);
+
+alert(
+"Nomor rekening berhasil disalin"
+);
+
+}
+
+
+/* RSVP WA */
+
+function kirimRSVP(){
+
+let nama =
+document.getElementById("nama").value;
+
+let status =
+document.getElementById("status").value;
+
+let ucapan =
+document.getElementById("ucapan").value;
+
+let pesan =
+`Assalamu'alaikum
+
+Nama : ${nama}
+Status : ${status}
+
+Ucapan :
+${ucapan}`;
+
+window.open(
+"https://wa.me/6285178011106?text="
++
+encodeURIComponent(pesan)
+);
+
+}
+
+
+/* Falling petals */
+
+for(let i=0;i<40;i++){
+
+let petal =
+document.createElement("div");
+
+petal.className =
+"petal";
+
+petal.innerHTML =
+"🌸";
+
+petal.style.left =
+Math.random()*100+"vw";
+
+petal.style.animationDuration =
+(5+Math.random()*10)+"s";
+
+petal.style.fontSize =
+(16+Math.random()*20)+"px";
+
+document.body.appendChild(
+petal
+);
+
+}
+
+</script>
+
+</body>
+</html>
